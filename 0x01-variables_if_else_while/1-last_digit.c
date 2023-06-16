@@ -21,15 +21,15 @@ int main(void)
 	printf("is");
 	if(lastdigit > 5 )
 	{
-	printf("and is greater than 5\n");
+	printf("%d and is greater than 5\n", lastdigit);
 	}
 	if(lastdigit == 0 )
         {
-        printf("and is 0\n");
+        printf("%d and is 0\n", lastdigit);
         }
 	if(lastdigit < 6 && lastdigit != 0 )
         {
-        printf("and is less than 6 and not 0\n");
+        printf("%d and is less than 6 and not 0\n", lastdigit);
         }
 	return (0);
 }
