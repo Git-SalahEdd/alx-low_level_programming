@@ -6,15 +6,15 @@
 
 int main(void)
 {
-	char i = 'a';
-	char i2 = 'A';
+	int i = 0;
+	char i2 = 'a';
 
-	while (i != 'z' + 1)
+	while (i < 9)
 	{
 		putchar(i);
 		i++;
 	}
-	while (i2 != 'Z' + 1)
+	while (i2 != 'f' + 1)
 	{
 		putchar(i2);
 		i2++;
