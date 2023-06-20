@@ -9,13 +9,13 @@ int _islower(int c)
 {
 	int rst = c;
 
-	if (rst >= 97 && rst <=122)
+	if (rst >= 97 && rst <= 122)
 	{
 		rst = 1;
 	}
-	if (rst >=65 && rst <= 90)
+	if (rst >= 65 && rst <= 90)
 	{
 		rst = 0;
 	}
-	return rst;
+	return (rst);
 }
