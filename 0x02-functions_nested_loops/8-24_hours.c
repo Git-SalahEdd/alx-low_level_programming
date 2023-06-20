@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - check for
- * Return: return 1 if c is , 0 otherwise
- * @ : parameter (int) to check if  or not
+ * jack_bauer - prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59
  */
 
 void jack_bauer(void)
