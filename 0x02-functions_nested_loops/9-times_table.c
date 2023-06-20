@@ -24,9 +24,10 @@ void times_table(void)
 				_putchar((calc / 10) + 48);
 				_putchar((calc % 10) + 48);
 			}
-			if (b != 0)
+			if (b < 9)
 			{
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 			}
 		}
