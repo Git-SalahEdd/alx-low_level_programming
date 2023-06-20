@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * _abs: return abs of value
- * Return: abs of the value
- * @abs: parameter (int) return the abs of the value
+ * _abs - check for abs value
+ * Return: return abs value
+ * @abs: parameter (int) to return abs value
  */
 
 int _abs(int abs)
 {
 	int abs2 = abs;
+	
 	if (abs2 < 0)
 	{
 		return (-abs2);
