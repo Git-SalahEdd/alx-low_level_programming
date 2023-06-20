@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * 9time table - print table 9 time
+ * times_table - print table 9 time
  */
 
 void times_table(void)
@@ -16,7 +16,10 @@ void times_table(void)
 			calc = a * b;
 			if (calc <= 9)
 			{
+				if ( a != 0 && b != 0)
+				{
 				_putchar(' ');
+				}
 				_putchar(calc + '0');
 			}
 			else
