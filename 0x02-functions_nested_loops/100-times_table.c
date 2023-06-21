@@ -19,15 +19,12 @@ if ((n < 15) && n > 0)
 			calc = a * b;
 			if (calc < 10)
 			{
-				_putchar( calc + '0');
-			
-			if ( b == n)
+				_putchar(calc + '0');
+			if (b == n)
 			continue;
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
-				_putchar(' ');
-			
 			}
 			else if ((calc > 9) && (calc < 100))
 			{
@@ -37,7 +34,6 @@ if ((n < 15) && n > 0)
 			continue;
                                 _putchar(',');
                                 _putchar(' ');
-				_putchar(' ');
 			}
 			else if ((calc >= 100) && (calc <= 144))
 			{
