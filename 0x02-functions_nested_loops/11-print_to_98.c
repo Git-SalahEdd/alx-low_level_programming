@@ -16,17 +16,19 @@ void print_to_98(int nbr)
 		{
 			printf("%d", nr);
 			if (nr != 98)
+			{
 				printf(", ");
+			}
 		}
-    	}
-    	else
+	}
+	else
 	{
-        	for (; nr >= 98; nr--)
+		for (; nr >= 98; nr--)
 		{
-            	printf("%d", nr);
-            	if (nr != 98)
-                	printf(", ");
-        	}
-    	}
+			printf("%d", nr);
+		if (nr != 98)
+			printf(", ");
+		}
+	}
 	printf("\n");
 }
