@@ -12,7 +12,7 @@ void more_numbers(void)
 	while (var <= 10)
 	{
 		int var2 = 0;
-		
+
 		while (var2 <= 14)
 		{
 			if (var2 >= 10)
