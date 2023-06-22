@@ -19,10 +19,7 @@ void more_numbers(void)
 			{
 				_putchar(var2 / 10 + '0');
 			}
-			else
-			{
 			_putchar(var2 % 10 + '0');
-			}
 			var2++;
 		}
 		var++;
