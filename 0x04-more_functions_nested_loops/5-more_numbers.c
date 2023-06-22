@@ -2,7 +2,7 @@
 
 /**
  * more_numbers - prints 10 times the numbers 0-14
- * Return: always 0 (sicess)
+ * Return: void function
  */
 
 void more_numbers(void)
@@ -11,18 +11,18 @@ void more_numbers(void)
 
 	while (var <= 10)
 	{
-		int var2 = 0;
+	int var2 = 0;
 
-		while (var2 <= 14)
-		{
-			if (var2 >= 10)
-			{
-			_putchar(var2 / 10 + '0');
-			}
-			_putchar(var2 % 10 + '0');
-		var2++;
-		}
-		var++;
-		_putchar('\n');
+	while (var2 <= 14)
+	{
+	if (var2 >= 10)
+	{
+	_putchar(var2 / 10 + '0');
+	}
+	_putchar(var2 % 10 + '0');
+	var2++;
+	}
+	var++;
+	_putchar('\n');
 	}
 }
