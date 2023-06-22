@@ -6,12 +6,9 @@
 
 void more_numbers(void)
 {
-	int var = 0;
-	int var2 = 0;
-
-	for (; var <= 10; var++)
+	for (int var = 0; var <= 10; var++)
 	{
-		for (; var2 <= 14; var2++)
+		for (int var2 = 0; var2 <= 14; var2++)
 		{
 			if (var2 >= 10)
 			{
