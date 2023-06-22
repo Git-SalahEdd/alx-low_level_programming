@@ -17,14 +17,11 @@ void more_numbers(void)
 			if (var2 >= 10)
 			{
 				_putchar(var2 / 10 + '0');
+			}
 				_putchar(var2 % 10 + '0');
-			}
-			else
-			{
-				_putchar(var2 + '0');
-			}
 		}
 		var++;
-		printf("\n");
+		_putchar('\n');
+
 	}
 }
