@@ -7,11 +7,12 @@
 
 void more_numbers(void)
 {
-	int var = 0;
+	int var = -1;
 	int var2 = 0;
 
 	while (var <= 10)
 	{
+		var++;
 		for (var2 = 0; var2 <= 14; var2++)
 		{
 			if (var2 >= 10)
@@ -20,7 +21,6 @@ void more_numbers(void)
 			}
 				_putchar(var2 % 10 + '0');
 		}
-		var++;
 		_putchar('\n');
 
 	}
