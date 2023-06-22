@@ -7,17 +7,17 @@
 
 void print_diagonal(int n)
 {
-	int var = 1;
+	int var = 0;
 
 	if (n > 0)
 	{
-	while (var <= n)
+	while (var < n)
 	{
-	int v = 1;
+	int v = 0;
 
 	var++;
 
-	while (v <= var)
+	while (v < var)
 	{
 		_putchar(32);
 		v++;
