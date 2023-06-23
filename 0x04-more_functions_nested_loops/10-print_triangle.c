@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_triangle - prints a triangle
+ *@size: size of the triangle
  */
 
 void print_triangle(int size)
@@ -23,9 +22,7 @@ void print_triangle(int size)
 			_putchar('#');
 			}
 			_putchar('\n');
-			
-			}
-		
+		}
 	}
 	else if (size <= 0)
 	{
