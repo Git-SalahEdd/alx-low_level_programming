@@ -22,6 +22,6 @@ int main(void)
 	}
 	x++;
 	}
-	printf("%ld\n", mv;
+	printf("%ld\n", mv);
 	return (0);
 }
