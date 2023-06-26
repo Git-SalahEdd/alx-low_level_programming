@@ -18,8 +18,8 @@ void puts_half(char *str)
 	i2 = i / 2;
 	while (str[i2] != '\0')
 	{
-		i2++;
 		_putchar(str[i2]);
+		i2++;
 	}
 	}
 	else
