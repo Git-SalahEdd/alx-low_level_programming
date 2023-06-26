@@ -5,7 +5,7 @@
 *@str: string will be edited
 */
 
-void puts_half(char *str)
+void puts_half(const char *str)
 {
 	int i = 0, i2;
 
@@ -24,7 +24,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-	int n = i - 1 / 2;
+	int n = (i - 1) / 2;
 
 	while (str[n] != '\0')
 	{
