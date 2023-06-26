@@ -26,12 +26,12 @@ void puts_half(char *str)
 	}
 	else
 	{
-	int n = (i - 1) / 2;
+	int n = i / 2;
 
 	while (str[n] != '\0')
 	{
-	_putchar(str[n]);
 	n++;
+	_putchar(str[n]);
 	}
 	}
 	_putchar('\n');
