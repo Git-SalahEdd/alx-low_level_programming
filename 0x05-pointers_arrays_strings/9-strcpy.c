@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
-*main - Entry point
-*Return: always 0 (success)
+**_strcpy - copies the string from src to dest
+*@src: input string
+*@dest: output string
+*Return: the final output string
 */
 
 char *_strcpy(char *dest, char *src)
