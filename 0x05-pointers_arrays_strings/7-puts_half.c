@@ -5,7 +5,7 @@
 *@str: string will be edited
 */
 
-void puts_half(const char *str)
+void puts_half(char *str)
 {
 	int i = 0, i2;
 
