@@ -2,8 +2,7 @@
 
 /**
  * _puts - check the code
- *
- * Return: Always 0.
+ *@str: string that will be edited
  */
 
 void _puts(char *str)
