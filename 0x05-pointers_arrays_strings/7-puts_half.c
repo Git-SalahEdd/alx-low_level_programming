@@ -22,7 +22,8 @@ void puts_half(char *str)
 		i2++;
 	}
 	}
-	else
+	else if (i % 2 != 0)
+	{
 	{
 	int n = (i - 1) / 2;
 
@@ -30,6 +31,7 @@ void puts_half(char *str)
 	{
 	n++;
 	_putchar(str[n]);
+	}
 	}
 	}
 	_putchar('\n');
