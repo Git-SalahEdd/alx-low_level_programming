@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*print_array(int *a, int n) - check the code for
+*print_array - print array
 *@a: parameter
 *@n: parameter
 */
@@ -10,13 +10,13 @@ void print_array(int *a, int n)
 {
 	int i = 0;
 
-	while(i < n)
+	while (i < n)
 	{
 		printf("%d", a[i]);
-                if(i < n - 1)
-                {
-                printf(", ");
-                }
+		if (i < n - 1)
+		{
+			printf(", ");
+		}
 		i++;
 	}
 	printf("\n");
