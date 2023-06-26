@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* puts2 - prints every other character of a string,
-* starting with the first character, 
-* followed by a new line
+*puts2 - prints every other character of a string,
+*starting with the first character,
+*followed by a new line
 *@str: stringed to be edited
  */
 
@@ -16,7 +16,6 @@ void puts2(char *str)
 		i++;
 	}
 	i--;
-	_putchar(str[0]);
 	while (j < i)
 	{
 	_putchar(str[j]);
