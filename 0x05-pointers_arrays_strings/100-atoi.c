@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
+*_atoi - string to an integer.
+*@s: parameter string to be edited
+* Return: Always numbers found in the string.
+*/
 
 int _atoi(char *s)
 {
 	unsigned int x = 0;
 	int pn = 1;
 
-do
-{
+do {
 	if (*s == '-')
 	{
 		pn *= -1;
@@ -21,7 +20,7 @@ do
 	{
 		x = (*s - '0') + (x * 10);
 	}
-	else if ( x > 0)
+	else if (x > 0)
 	{
 		break;
 	}
