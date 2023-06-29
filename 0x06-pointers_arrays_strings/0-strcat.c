@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* char *_strcat -
-*@*dest:
-*@src:
-* Return:
+*char *_strcat - appends the src string to the dest string
+*@dest:parameter string receive a string from src
+*@src:parameter string to be added to first parameter dest
+*Return:final string dest
 */
 
 char *_strcat(char *dest, char *src)
