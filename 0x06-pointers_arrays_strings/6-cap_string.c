@@ -2,12 +2,11 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
- *
- */
- 
+**cap_string - capitalizes all words of a string
+*@s: the string to be capi
+* Return: final string
+*/
+
 char *cap_string(char *s)
 {
 	int i = 0, j = -1;
