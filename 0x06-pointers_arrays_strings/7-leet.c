@@ -10,13 +10,13 @@ char *leet(char *s)
 {
 int y = 0, x = 0;
 char stg0[] = "aAeEoOtTlL";
-char stg00[] = "4433007711;
+char stg00[] = "4433007711";
 
 for (; y < 10; y++)
 {
 	for(; x < 10; x++)
 	{
-		if(s[y] == s[x])
+		if(s[y] == stg0[x])
 		{
 			s[y] = stg00[x];
 		}
