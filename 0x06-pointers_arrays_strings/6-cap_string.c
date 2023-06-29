@@ -13,7 +13,7 @@ char *cap_string(char *s)
 
 while (s[j])
 {
-	while(!(s[j] >= 97 && s[j] <= 122))
+	while (!(s[j] >= 97 && s[j] <= 122))
 		j++;
 if (s[j - 1] == ' ' ||
 s[j - 1] == '\t' ||
