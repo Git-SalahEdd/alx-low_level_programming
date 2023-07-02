@@ -3,7 +3,7 @@
 /**
 **rot13 - encodes a string using rot13
 *@s: parameter
-* Return: final result
+*Return: final result
 */
 
 char *rot13(char *s)
