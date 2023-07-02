@@ -8,22 +8,21 @@
 
 char *rot13(char *s)
 {
-	int i;
+	int i = 0, k;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char *p = s;
 
-	while (*s)
+	while (s[i] != '\0')
 	{
-		while (i <= 52)
+		while (k <= 52)
 		{
-		if (*s == rot13[i])
+		if (s[i] == rot13[i])
 		{
-		*s = ROT13[i];
+		s[i] = rot13[i];
 		break;
 		}
 		}
-		s++;
+		i++;
 	}
-	return (p);
+	return (s);
 }
