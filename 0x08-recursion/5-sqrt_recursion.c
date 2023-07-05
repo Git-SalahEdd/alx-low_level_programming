@@ -1,4 +1,5 @@
 #include "main.h"
+int _sqrt(int n, int start, int end);
 
 /**
 *_sqrt_recursion - square root
@@ -45,7 +46,7 @@ int _sqrt(int n, int start, int end)
 	}
 	else if (square < n)
 	{
-		_sqrt(n, mid + 1, end);
+		return (_sqrt(n, mid + 1, end));
 	}
 	return (_sqrt(n, start, mid - 1));
 }
