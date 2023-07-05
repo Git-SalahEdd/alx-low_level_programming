@@ -8,17 +8,17 @@
 
 int _sqrt_recursion(int n)
 {
-	return (sqr(n, 1));
+	return (skwer(n, 1));
 }
 
 /**
-*sqr - find square root
+*rsqr - find square root
 *@n: parameter
 *@m: parameter
 * Return: final result int
 */
 
-int sqr(int n, int m)
+int skwer(int n, int m)
 {
 	if (m * m == n)
 	{
@@ -26,7 +26,7 @@ int sqr(int n, int m)
 	}
 	else if (m * m < n)
 	{
-		return (sqr(n, m + 1));
+		return (skwer(n, m + 1));
 	}
 	else
 	{
