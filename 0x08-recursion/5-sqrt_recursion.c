@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
-*rsqr - find square root
+*skwer - find square root
 *@n: parameter
 *@m: parameter
 * Return: final result int
