@@ -2,7 +2,7 @@
 
 /**
 *wildcmp -  compares two strings that can be considered identical
-*@: string1
+*@s1: string1
 *@s2: string2
 *Return: 0 or 1
 */
@@ -13,7 +13,7 @@ if (*s1 == '\0')
 {
 	if (*s2 != '\0' && *s2 == '*')
 	{
-	return (wildcmp(s1, s2 +1));
+	return (wildcmp(s1, s2 + 1));
 	}
 	return (*s2 == '\0');
 }
