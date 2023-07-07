@@ -9,7 +9,10 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, i2;
+
+	i = atoi(argv[1]);
+	i2 = atoi(argv[2]);
 
 	if (argc < 2)
 	{
@@ -18,8 +21,8 @@ int main(int argc, char *argv[])
 	}
 	else if (argc == 3)
 	{
-		i = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", i);
+		s = i * i2;
+		printf("%d\n", s);
 	}
 	return (0);
 }
