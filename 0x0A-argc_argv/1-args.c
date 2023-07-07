@@ -2,6 +2,8 @@
 
 /**
 *main - Entry point
+*@argc: argc int counter
+*@argv: argv char array char
 *Return: always 0 (success)
 */
 
