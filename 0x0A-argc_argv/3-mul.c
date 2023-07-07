@@ -9,20 +9,19 @@
 
 int main(int argc, char *argv[])
 {
+	if (argc > 2)
+	{
 	int s, i, i2;
 
 	i = atoi(argv[1]);
 	i2 = atoi(argv[2]);
-
-	if (argc < 3)
-	{
-		printf("Error\n");
-		return (1);
+		s = i * i2;
+		printf("%d\n", s);
 	}
 	else
 	{
-		s = i * i2;
-		printf("%d\n", s);
+		printf("Error\n");
+		return (1);
 	}
 	return (0);
 }
