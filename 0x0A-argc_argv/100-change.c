@@ -1,59 +1,37 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
-*main - Entry point
-**@argc: argc int arg counter
-*@argv: argv char arg vector
-*Return: always 0 (success)
-*/
+ * main - main function
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: Always 0 on success and 1 on failure
+ */
 
 int main(int argc, char *argv[])
 {
-	if (argc > 2)
+	int i, k = 0, m;
+	int array[5] = {25, 10, 5, 2, 1};
+
+	if (argc != 2)
 	{
-	return (printf("Error\n"), 1);
+		printf("Error\n");
+		return (1);
 	}
-	if (argc == 2)
+	m = atoi(argv[1]);
+	if (m < 0)
 	{
-	int money[] = {1, 2, 5, 10, 25};
-	int n = sizeof(money) / sizeof(money[0]);
-	int input_v = atoi(argv[1]);
-	int mnc = mincoins(money, n, input_v);
-
-	printf("%d\n", mnc);
-	}
-	return (0);
-}
-
-/**
-*mincoins -  function calculat min of coins to make change
-*@coins[]: array of given coins
-*@n: nbr element on the array of coins
-*@input_v: money given to make change
-*/
-
-int mincoins(int coins[], int n, int input_v)
-{
-	if (input_v < 0)
-	{
+		printf("0\n");
 		return (0);
 	}
-	else
+	for (i = 0; i < 5; i++)
 	{
-	int dp[1000];
-	int i, j;
-
-	dp[0] = 0;
-	for (i = 1; i <= input_v; i++)
-	{
-		dp[i] = input_v + 1;
-		for (j = 0; j < n; j++)
+		while (m >= array[i])
 		{
-			if (coins[j] <= i && dp[i - coins[j]] + 1 < dp[i])
-				dp[i] = dp[i - coins[j]] + 1;
+			m -= array[i];
+			k++;
 		}
 	}
-	return (dp[input_v]);
-	}
+	printf("%d\n", k);
 	return (0);
 }
