@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	if(argc > 2)
+	if (argc > 2)
 	{
 	return (printf("Error\n"), 1);
 	}
@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 	int n = sizeof(money) / sizeof(money[0]);
 	int input_v = atoi(argv[1]);
 	int mnc = mincoins(money, n, input_v);
+
 	printf("%d\n", mnc);
 	}
 	return (0);
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
 
 int mincoins(int coins[], int n, int input_v)
 {
-	if(input_v < 0)
+	if (input_v < 0)
 	{
 		return (0);
 	}
@@ -52,7 +53,7 @@ int mincoins(int coins[], int n, int input_v)
 				dp[i] = dp[i - coins[j]] + 1;
 		}
 	}
-	return dp[input_v];
+	return (dp[input_v]);
 	}
-	return(0);
+	return (0);
 }
