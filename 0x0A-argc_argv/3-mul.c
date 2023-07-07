@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else
+	else if (argc == 2)
 	{
 		int i = atoi(argv[1]) * atoi(argv[2]);
 
