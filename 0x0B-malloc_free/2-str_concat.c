@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 		size2++;
 	}
 	sp = size1 + size2;
-	p = malloc((sizeof(char) * sp) + 1);
+	p = malloc(sp *sizeof(char) + 1);
 	spf = size1 + size2;
 	for ( ; k < size1; k++)
 	{
