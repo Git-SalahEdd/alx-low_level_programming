@@ -37,6 +37,6 @@ char *str_concat(char *s1, char *s2)
 		sp--;
 		size2--;
 	}
-	p[spf] = "\0";
+	p[spf] = '\0';
 	return (p);
 }
