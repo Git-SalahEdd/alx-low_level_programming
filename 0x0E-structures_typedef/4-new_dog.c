@@ -35,6 +35,7 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -52,8 +53,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int name_len;
 	int owner_len;
 
-	if (age <= 0)
-	age *= -1;
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
