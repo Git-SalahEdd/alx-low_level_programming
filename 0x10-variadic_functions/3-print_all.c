@@ -25,7 +25,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 'i':
 				num = va_arg(args, int);
-				printf("%i", num);
+				printf("%d", num);
 				break;
 			case 'f':
 				f = va_arg(args, double);
