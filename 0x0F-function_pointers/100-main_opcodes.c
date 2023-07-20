@@ -8,7 +8,7 @@
 *Return: 0 always success
 */
 
-int maint (int argc, char **argv)
+int main (int argc, char **argv)
 {
 	int b, i;
 	int (*add)(int, char **) = main;
@@ -31,7 +31,7 @@ int maint (int argc, char **argv)
 	for (i = 0; i < b; i++)
 	{
 		opcode = *(unsigned char *)add;
-		printf("%.2", opcode);
+		printf("%.2x", opcode);
 
 		if (i == b - 1)
 			continue;
