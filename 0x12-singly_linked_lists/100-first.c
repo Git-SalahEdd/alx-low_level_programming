@@ -3,7 +3,7 @@
 void _constructor(void) __attribute__((constructor));
 
 /**
-*_constractor - exe before main() func
+*_constructor - exe before main() func
 */
 
 void _constructor(void)
