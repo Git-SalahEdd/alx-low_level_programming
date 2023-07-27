@@ -19,7 +19,7 @@ int _strlen(char *s)
 
 /**
 *print_list - print all element of a list
-*@list_t
+*@h: ptr to list to be printed
 *Return: nbr of elements
 */
 
