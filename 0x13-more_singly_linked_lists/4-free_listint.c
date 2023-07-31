@@ -7,7 +7,7 @@
 
 void free_listint(listint_t *head)
 {
-	list_t *node, *next_node;
+	listint_t *node, *next_node;
 
 	if (!head)
 		return;
