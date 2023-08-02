@@ -11,6 +11,9 @@ size_t print_listint_safe(const listint_t *head)
 	size_t i = 0;
 	const listint_t *ptr = head, *slw_ptr = head, *fst_ptr = head, *loop;
 
+	if (!head)
+		exit(98);
+
 	while (fst_ptr && fst_ptr->next)
 	{
 		slw_ptr = slw_ptr->next;
