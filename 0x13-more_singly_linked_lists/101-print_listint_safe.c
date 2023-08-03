@@ -43,7 +43,7 @@ size_t print_listint_safe(const listint_t *head)
 		if (ptr == loop && f == 1)
 		{
 			printf("--> [%p] %d\n", (void *)loop, ptr->n);
-			break;
+			return (i);
 		}
 	}
 	return (i);
