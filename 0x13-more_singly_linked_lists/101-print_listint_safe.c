@@ -12,7 +12,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t i = 0;
 	const listint_t *slw_ptr = head, *fst_ptr = head, *loop;
 
-	if (!head || !head->next)
+	if (!head)
 		exit(98);
 
 	while (fst_ptr && fst_ptr->next)
@@ -42,7 +42,7 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		if (head == loop && f == 1)
 		{
-			printf("--> [%p] %d\n", (void *)head, head->n);
+			printf("--> [%p] %d\n", (void *)loop, loop->n);
 			return (i);
 		}
 	}
