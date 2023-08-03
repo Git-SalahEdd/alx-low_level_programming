@@ -1,8 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-
-
-size_t print_listint_safe(const listint_t *head);
 
 /**
 *lpd_listint_len - Counts the number of unique idx
@@ -18,7 +14,7 @@ size_t lpd_listint_len(const listint_t *head)
 	size_t idx = 1;
 
 	if (head == NULL || head->next == NULL)
-		return (0);
+		exit (98);
 
 	ptr2 = head->next;
 	ptr1 = (head->next)->next;
