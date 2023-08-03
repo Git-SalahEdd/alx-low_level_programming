@@ -1,50 +1,88 @@
 #include "lists.h"
+#include <stdio.h>
+
+
+size_t print_listint_safe(const listint_t *head);
 
 /**
-*print_listint_safe - prints a listint_t linked list.
-*@head: head of nodes
-*Return: the number of nodes in the list
+*lpd_listint_len - Counts the number of unique idx
+*in a looped listint_t linked list.
+*@head: A pointer to the head of the listint_t to check.
+*Return: If the list is not looped - 0.
+*Otherwise - the number of unique idx in the list.
 */
 
+size_t lpd_listint_len(const listint_t *head)
+{
+	const listint_t *ptr2, *ptr1;
+	size_t idx = 1;
+
+	if (head == NULL || head->next == NULL)
+		return (0);
+
+	ptr2 = head->next;
+	ptr1 = (head->next)->next;
+
+	while (ptr1)
+	{
+		if (ptr2 == ptr1)
+		{
+			ptr2 = head;
+			while (ptr2 != ptr1)
+			{
+				idx++;
+				ptr2 = ptr2->next;
+				ptr1 = ptr1->next;
+			}
+
+			ptr2 = ptr2->next;
+			while (ptr2 != ptr1)
+			{
+				idx++;
+				ptr2 = ptr2->next;
+			}
+
+			return (idx);
+		}
+
+		ptr2 = ptr2->next;
+		ptr1 = (ptr1->next)->next;
+	}
+
+	return (0);
+}
+
+/**
+ * print_listint_safe - Prints a listint_t list safely.
+ * @head: A pointer to the head of the listint_t list.
+ *
+ * Return: The number of idx in the list.
+ */
 size_t print_listint_safe(const listint_t *head)
 {
-	int f = 0;
-	size_t i = 0;
-	const listint_t *slw_ptr = head, *fst_ptr = head, *loop;
+	size_t idx, index = 0;
 
-	if (!head)
-		exit(98);
+	idx = lpd_listint_len(head);
 
-	while (fst_ptr && fst_ptr->next)
+	if (idx == 0)
 	{
-		slw_ptr = slw_ptr->next;
-		fst_ptr = fst_ptr->next->next;
-		if (slw_ptr == fst_ptr)
+		for (; head != NULL; idx++)
 		{
-			slw_ptr = head;
-			while (slw_ptr != fst_ptr)
-			{
-				slw_ptr = slw_ptr->next;
-				fst_ptr = fst_ptr->next;
-			}
-			loop = slw_ptr;
-			break;
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
 		}
 	}
-	while (head)
-	{	printf("[%p] %d\n", (void *)head, head->n);
-		i++;
-		head = head->next;
-		if (head == loop && f == 0)
+
+	else
+	{
+		for (index = 0; index < idx; index++)
 		{
-			f++;
-			continue;
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
 		}
-		if (head == loop && f == 1)
-		{
-			printf("--> [%p] %d\n", (void *)loop, loop->n);
-			return (i);
-		}
+
+		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
-	return (i);
+
+	return (idx);
 }
