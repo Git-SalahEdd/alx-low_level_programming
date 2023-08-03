@@ -10,7 +10,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	int f = 0;
 	size_t i = 0;
-	const listint_t *ptr = head, *slw_ptr = head, *fst_ptr = head, *loop;
+	const listint_t *slw_ptr = head, *fst_ptr = head, *loop;
 
 	if (!head || !head->next)
 		exit(98);
@@ -31,18 +31,18 @@ size_t print_listint_safe(const listint_t *head)
 			break;
 		}
 	}
-	while (ptr)
-	{	printf("[%p] %d\n", (void *)ptr, ptr->n);
+	while (head)
+	{	printf("[%p] %d\n", (void *)head, head->n);
 		i++;
-		ptr = ptr->next;
-		if (ptr == loop && f == 0)
+		head = head->next;
+		if (head == loop && f == 0)
 		{
 			f++;
 			continue;
 		}
-		if (ptr == loop && f == 1)
+		if (head == loop && f == 1)
 		{
-			printf("--> [%p] %d\n", (void *)loop, ptr->n);
+			printf("--> [%p] %d\n", (void *)head, head->n);
 			return (i);
 		}
 	}
