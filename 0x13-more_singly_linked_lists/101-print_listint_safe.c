@@ -14,7 +14,7 @@ size_t lpd_listint_len(const listint_t *head)
 	size_t idx = 1;
 
 	if (head == NULL || head->next == NULL)
-		return (0)
+		return (0);
 
 	ptr2 = head->next;
 	ptr1 = (head->next)->next;
