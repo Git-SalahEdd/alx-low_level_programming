@@ -25,7 +25,7 @@ int get_bit_rsv(unsigned long int n, unsigned int index)
 	if (index == 0)
 		return (n & 1);
 	if (n > 1)
-		return (get_bit_recursive(n >> 1, index - 1));
+		return (get_bit_rsv(n >> 1, index - 1));
 
 	return (-1);
 }
