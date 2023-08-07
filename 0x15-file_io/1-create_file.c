@@ -9,19 +9,21 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int i = 0, fd;
-	ssize_t bytes = 0;
+	char *t_c = text_content;
+	int fd;
+	ssize_t len = 0, bytes = 0;
+
+	while (*t_c++)
+		len++;
 
 	if (!filename)
 		return (-1);
 
-	while (*text_content++)
-		i++;
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return (-1);
-	if (i)
-		bytes = write(fd, text_content, i);
+	if (len)
+		bytes = write(fd, text_content, len);
 	close(fd);
-	return (bytes == i ? 1 : -1);
+	return (bytes == len ? 1 : -1);
 }
