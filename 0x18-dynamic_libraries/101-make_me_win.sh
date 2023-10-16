@@ -1,2 +1,2 @@
 #!/bin/bash
-LD_PRELOAD=/$PWD/libinjec.so
+LD_PRELOAD=/$PWD/libinjc.so
